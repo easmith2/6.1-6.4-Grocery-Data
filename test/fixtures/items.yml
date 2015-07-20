@@ -1,0 +1,5 @@
+one:
+  customer_id: 1
+  name: "8oz Steak"
+  price_in_cents: 1100
+  category: "Meat"
