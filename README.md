@@ -1,5 +1,4 @@
 # Grocery Data Viewer
-![](http://media.giphy.com/media/VTXzh4qtahZS/giphy.gif)
 
 ## What is it
 This is a starter grocery data viewer app to be used as a base from which we will learn about user authentication, pagination & AJAX. The functionality by the end of the week will be as follows:
