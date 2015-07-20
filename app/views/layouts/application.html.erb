@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if current_customer %>
+  Signed in as <%= current_customer.name %> | <%= link_to 'Sign out', '/signout' %>
+<% else %>
+  <%= link_to 'Sign in', '/signin' %> | <%= link_to 'Sign up', '/signup' %>
+<% end %>
+
 <%= yield %>
 
 </body>
