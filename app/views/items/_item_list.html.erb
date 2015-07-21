@@ -1,0 +1,22 @@
+<% a = 0 %>
+<% b = 1 %>
+<ul class="item_list">
+  <% @items.each_slice(25) do |row| %>
+    <li class="section_<%= a + 1 %>">
+      <% a += 1 %>
+      <% row.each do |item| %>
+        <%= item.name %>
+        <br />
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<ul class="link_list">
+  <% a.times do %>
+    <li class="link_<%= b %>">
+      <a href="display:none" class="link_<%= b %>" number="<%= b %>">
+      <%= "page #{b}" %>
+    </li>
+    <% b += 1 %>
+  <% end %>
+</ul>
