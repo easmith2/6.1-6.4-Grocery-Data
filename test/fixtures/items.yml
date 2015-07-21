@@ -3,3 +3,9 @@ one:
   name: "8oz Steak"
   price_in_cents: 1100
   category: "Meat"
+
+two:
+  customer_id: 2
+  name: "Carrots"
+  price_in_cents: 350
+  category: "Vegetable"

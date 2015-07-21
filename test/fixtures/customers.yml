@@ -1,3 +1,11 @@
 one:
   name: "Robert Pearce"
   address: "123 Main Street, Americaville, SC 29306"
+  email: "foo@bar.com"
+  password_digest: <%= BCrypt::Password.create('password', cost: 4) %>
+
+two:
+  name: "Pobert Rearce"
+  address: "123-B Main Street, Americaville, SC 29306"
+  email: "bar@foo.com"
+  password_digest: <%= BCrypt::Password.create('password', cost: 4) %>
