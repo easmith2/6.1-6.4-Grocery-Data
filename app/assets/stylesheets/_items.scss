@@ -1,0 +1,38 @@
+.item_list{
+  list-style: none
+
+}
+.section_*{
+
+}
+.link_list{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  > li {
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    display: inline-block;
+    > a {
+      @include anchorDecoration;
+    }
+    &:after {
+      content: "|";
+    }
+    &:last-of-type:after {
+      content: none;
+    }
+  }
+}
+// .link_<%= b %>{
+//
+// }
+
+
+
+
+// <ul class="item_list">
+// <li class="section_<%= a + 1 %>">
+// <ul class="link_list">
+// <li class="link_<%= b %>" style="display: inline-block">
+// <a href="display:none" class="link_<%= b %>" number="<%= b %>">

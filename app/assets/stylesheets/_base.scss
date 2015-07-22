@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body{
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  font-family: Helvetica Narrow, Arial Narrow, sans-serif;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    color: #778899;
+  }
+}
