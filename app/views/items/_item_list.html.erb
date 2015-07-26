@@ -1,23 +1,12 @@
-<% a = 0 %>
-<% b = 1 %>
 <ul class="item_list">
   <% @items.each_slice(25) do |row| %>
-    <li class="section_<%= a + 1 %>">
-      <% a += 1 %>
+    <li class="section_<%= @page_index + 1 %>">
+      <% @page_index += 1 %>
       <% row.each do |item| %>
         <b><%= item.name %> </b>
         ($</b><%= number_with_precision(item.price_in_cents.to_f/100, precision: 2) %>, <i><%= item.category %></i>)
-        <br />
+        <br>
       <% end %>
     </li>
-  <% end %>
-</ul>
-<ul class="link_list">
-  <% a.times do %>
-    <li class="link_<%= b %>" style="display: inline-block">
-      <a href="display:none" class="link_<%= b %>" number="<%= b %>">
-      <%="page #{b}"%>
-    </li>
-    <% b += 1 %>
   <% end %>
 </ul>

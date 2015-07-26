@@ -17,6 +17,4 @@ class SessionsController < ApplicationController
     redirect_to '/signin'
   end
 
-  private
-
 end
