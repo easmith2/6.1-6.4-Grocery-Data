@@ -4,11 +4,13 @@ class ApplicationHelperTest < ActionView::TestCase
   include ApplicationHelper
 
   test "current_customer method returns customer associated with session[:customer_id]" do
-    customer = customers(:one)
+    customer = Customer.create!(name: 'Han',
+                            email: 'han@solo.com',
+                            password: 'password',
+                            password_confirmation: 'password'
+                            )
     session[:customer_id] = customer.id
-    binding.pry
-    result = assigns(current_customer)
-    assert_equal customer, result
+    assert_equal customer, current_customer
   end
 
 end
