@@ -4,7 +4,7 @@
       <% @page_index += 1 %>
       <% row.each do |item| %>
         <b><%= item.name %> </b>
-        ($</b><%= number_with_precision(item.price_in_cents.to_f/100, precision: 2) %>, <i><%= item.category %></i>)
+        ($<%= number_with_precision(item.pre_format_cost, precision: 2) %>, <i><%= item.category %></i>)
         <br>
       <% end %>
     </li>

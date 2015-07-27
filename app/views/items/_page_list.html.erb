@@ -2,7 +2,7 @@
   <% page = 1 %>
   <% @page_total.times do %>
     <li class="link_<%= page %>" style="display: inline-block">
-      <%= link_to "page #{page}", '/items_paginated/' + page.to_s %>
+      <%= link_to "#{page}", '/items_paginated/' + page.to_s, id: "page_link" %>
     </li>
     <% page += 1 %>
   <% end %>

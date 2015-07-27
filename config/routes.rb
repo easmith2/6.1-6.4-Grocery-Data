@@ -9,8 +9,5 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-
-  get 'items_paginated/:page_number',
-        to: 'items#items_paginated',
-        as: 'items_per_page'
+  get 'items_paginated/:page_number' => 'items#index'
 end
